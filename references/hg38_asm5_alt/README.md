@@ -3,7 +3,7 @@ Briefly, this reference is a modification of the [GATK Resource Bundle](https://
 A direct link to the reference file is included in `get_ref.sh`.
 The reference genome itself was unaltered for our processing.
 
-The main change we made was to re-map the alternate (ALT) contigs (TODO: this idea came from someone on Twitter 2+ years ago, but I have yet to re-find the tweet.)
+The main change we made was to re-map the alternate (ALT) contigs (thanks to [Erik Garrison](https://twitter.com/erikgarrison/status/1247856824319082496) for suggesting a simple approach to accomplish this goal).
 The exact ALT remappings are contained in `hg38.fa.alt`.
 Steps for replicating the process from scratch is included in `get_ref.sh`.
 
