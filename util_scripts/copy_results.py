@@ -36,4 +36,4 @@ if __name__ == '__main__':
     #... and the CSV file
     in_csv = f'{PIPELINE_RESULTS_FOLDER}/results_{new_date}_csv/small_summary.csv'
     out_csv = f'{date_folder}/small_summary_{new_date}.csv'
-    shutil.copy(in_pdf, out_pdf)
+    shutil.copy(in_csv, out_csv)
