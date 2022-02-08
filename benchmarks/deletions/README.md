@@ -1,6 +1,7 @@
 # Deletions
 Only two of the GIAB samples currently have released deletion datasets.
 Neither of these datasets are available in hg38, so they were lifted over semi-manually to create the truth sets.
+Of course, this can inject errors into the benchmark sets due to errors during the liftover process.
 
 ## HG001
 The HG001 benchmark is derived from the [paper for svclassify](https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-016-2366-2) and contains 2676 deletions events.
@@ -19,9 +20,9 @@ Steps to generate hg38 benchmark file:
 The HG002 benchmark is derived from the [GIAB v0.6 release](https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/analysis/NIST_SVs_Integration_v0.6/) and restricted to deletions.
 
 Steps to generate hg38 benchmark file:
-1. Download the [VCF file from GIAB](https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/analysis/NIST_SVs_Integration_v0.6/HG002_SVs_Tier1_v0.6.vcf.gz).
-2. We wrote a script to convert only the deletions calls from the VCF file into a BED file.
-3. Manually liftover the bed file from hg19 to hg38 using the UCSC liftover tool: [https://genome.ucsc.edu/cgi-bin/hgLiftOver](https://genome.ucsc.edu/cgi-bin/hgLiftOver)
+1. Download the [VCF file](https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/analysis/NIST_SVs_Integration_v0.6/HG002_SVs_Tier1_v0.6.vcf.gz) and [Tier1 region BED file](https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/data/AshkenazimTrio/analysis/NIST_SVs_Integration_v0.6/HG002_SVs_Tier1_v0.6.bed) from GIAB.
+2. We wrote a script to convert only the deletions calls from the VCF file into a BED file for each deletion event.
+3. Manually liftover the variant BED file and the benchmark region BED file from hg19 to hg38 using the UCSC liftover tool: [https://genome.ucsc.edu/cgi-bin/hgLiftOver](https://genome.ucsc.edu/cgi-bin/hgLiftOver)
 4. Use `SURVIVOR bedtovcf` to generate VCF body info.
 5. Mock header information and replace genotype calls with "0/1" inside the VCF. 
 6. Sort, `bgzip`, and `tabix` the result.
