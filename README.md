@@ -13,6 +13,7 @@ The initial release just included the final results files that are reviewed afte
 Since then, the following information has been added:
 
 - (2021-12-13) Descriptions and links to the specific reference files
+- (2022-02-08) Descriptions and links to the benchmark truth sets (VCF and BED when available)
 
 We rarely change the reference files we are testing with.
 However, aligners and callers are added/updated semi-frequently depending on the significance of the change and reported performance by the developers/researchers.
@@ -37,3 +38,7 @@ Examples of things already on the TODO radar:
 - Rules for aligners and callers
 - Rules for evaluation
 - ~~Description/links to specific reference files~~
+
+## Release cadence
+Starting with Release 2022-02-11, we intend to restrict the formal releases to _at most_ once a week.
+New or potentially partial results may appear throughout the work week, but we intend to summarize these with a single formal release each week.
