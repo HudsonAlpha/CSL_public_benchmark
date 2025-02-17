@@ -1,5 +1,8 @@
 # CSL_public_benchmark
-This repo is intended to provide a periodically-updated, public view into genome sequencing benchmarks managed by [HudsonAlpha's Clinical Services Lab (CSL)](https://clinicallab.org).
+
+**This repository will no longer receive updates after June 2022**
+
+This repo is intended to provide a ~~periodically-updated~~, public view into genome sequencing benchmarks managed by [HudsonAlpha's Clinical Services Lab (CSL)](https://clinicallab.org) circa 2021-2022.
 The benchmarking results primarily provide the CSL a systematic approach to evalute various reference genome, aligner, and variant caller combinations against each other.
 All of the datasets we used for testing were generated at HudsonAlpha.
 The short-read PCR-free datasets were generated using standard clinical processes in the CSL and are currently private datasets.
@@ -40,5 +43,5 @@ Examples of things already on the TODO radar:
 - ~~Description/links to specific reference files~~
 
 ## Release cadence
-Starting with Release 2022-02-11, we intend to restrict the formal releases to _at most_ once a week.
-New or potentially partial results may appear throughout the work week, but we intend to summarize these with a single formal release each week.
+~~Starting with Release 2022-02-11, we intend to restrict the formal releases to _at most_ once a week.
+New or potentially partial results may appear throughout the work week, but we intend to summarize these with a single formal release each week.~~
